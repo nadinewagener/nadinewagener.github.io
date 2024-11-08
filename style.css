@@ -1,0 +1,185 @@
+/* styles.css */
+
+body {
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+	width: 100%;
+	justify-content: center; /* Center the container */
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+.container {
+    width: 68%; /* Limit the entire page width to 80% */
+    display: flex; /* Flexbox for sidebar and main content */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 20px auto; /* Center the container and add top/bottom margin */
+    padding: 20px; /* Space inside the container */
+    border-left: 2px solid #ccc; /* Border around the container */
+    background-color: white; /* Background color for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh; /* Full height */
+    background-color: white;	/*#dedede; */
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+	/*border-radius: 0px 20px 20px 0px; /* Rounded corners */
+	text-align: center;
+	margin-top: 40px;
+}
+
+.main {
+    padding-left: 40px; /* Increased padding between sidebar and main content */
+	margin-left: 240px;
+    flex: 4;
+	text-align: justify;
+	line-height: 2;
+}
+
+/* Navigation Bar */
+nav {
+    /* background-color: #333; */
+	
+	background-color: white;
+    color: white; /*black*/
+	padding: 15px;
+	position: fixed;
+	top: 0; /* Stick to the top */
+	left: 0; /* Align to the left edge */
+	width: 100%; /* Main content width */
+    z-index: 1000; /* Ensure it is above other content */
+    box-shadow: 0 2px 0.5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+	display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    gap: 40px; /* Spacing between navigation items */
+}
+
+/* Links in the Navigation Bar */
+nav a {
+    color: black;
+    /*margin-right: 20px;*/
+    text-decoration: none;
+}
+
+/* Underline effect on hover */
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-name {
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: black;
+    margin-right: 20px; /* Space between name and links */
+}
+
+nav a h1:hover{
+	text-decoration: none;
+}
+
+section{
+	padding-top: 80px; /* Space for the fixed navigation bar */
+    margin-top: -80px; /* Negative margin to offset the padding */
+}
+
+.content{
+	margin-top: 60px;
+	margin-right:25px;
+}
+
+
+h2 {
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.entry {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+	margin-right:25px;
+}
+
+.entry img {
+    margin-right: 25px; /* Space between image and text */
+    width: 100px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 15px; /* Optional: keep the rounded corners */
+	flex-shrink: 0;
+}
+
+
+        }
+.publications{
+	display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+	justify-content: center; /* Center items vertically in the column */
+}
+
+.title{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.title a{
+	text-decoration: none;
+	color: black;
+}
+
+.title a:hover{
+	text-decoration: underline;
+}
+
+
+.authors {
+    margin-top: 0; 
+	margin-bottom: 0;
+}
+
+.venue {
+    margin-top: 0; 
+}
+
+.video-container {
+            width: 100px; /* Breite des Containers */
+            height: 80px; /* Höhe des Containers */
+            overflow: hidden; /* Versteckt alles außerhalb des Containers */
+            position: relative; /* Für die absolute Positionierung des Videos */
+			margin-right: 25px;
+			border-radius: 15px; /* Abgerundete Ecken für den Container */
+			flex-shrink: 0;
+        }
+    .video-container video {
+            width: 100%; /* Video an den Container anpassen */
+            height: 100%; /* Höhe automatisch anpassen */
+            position: absolute; /* Positionierung des Videos */
+            top: 0;
+            left: 0;
+            opacity: 0; /* Video standardmäßig unsichtbar */
+            transition: opacity 0.5s; /* Sanfter Übergang */
+			border-radius: 15px; /* Abgerundete Ecken für den Container */
+		}
+    .video-container:hover video {
+            opacity: 1; /* Video sichtbar beim Hover */
+        }
+		
+	.video-container:hover img {
+            opacity: 0; /* Hide image on hover */
+		}
+		
+	.video-container img {
+    margin-right: 25px; /* Space between image and text */
+    width: 100%; /* Set a fixed width */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 15px; /* Optional: keep the rounded corners */
+}
