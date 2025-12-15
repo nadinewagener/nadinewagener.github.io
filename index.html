@@ -22,6 +22,18 @@
 		<p><a href="https://www.researchgate.net/profile/Nadine_Wagener" target="_blank" rel="noopener noreferrer">Research Gate Profile</a></p>
 		<p><a href="https://de.linkedin.com/in/nadine-wagener-10a895149" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
 		
+		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+    ☰
+    <span class="sr-only">Menu</span>
+  </button>
+  <nav id="mobile-menu">
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#journey">My professional journey</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+  
     </div>
 	
 	
@@ -46,7 +58,7 @@
 					<p>In October 2025, I became groupleader of the Personal Pervasive Computing (PPC) group in the division society at OFFIS, an institut for informatics. I lead a group of four PhD students here, and together we study how people use everyday digital technologies at home and how these technologies shape daily routines, family/household relationships, and society. The group focuses on enabling understandable and accepted digital interactions, strengthening citizens’ control over their data and digital rights, and addressing social, ethical, and ecological challenges to support healthy and sustainable living. 
 					<br> <br>I began my academic career at the <a href="https://www.uni-bremen.de/dmlab" target="_blank" rel="noopener noreferrer">University of Bremen</a> in November 2019, focusing on novel interaction techniques for virtual reality (VR). My research soon narrowed to designing VR solutions aimed at well-being and self-care. I felt honored to be supervised by <a href="https://www.unisg.ch/de/universitaet/ueber-uns/organisation/detail/person-id/43db12b2-0cc7-4031-a69c-3d54d39d8790/" target="_blank" rel="noopener noreferrer">Johannes Schöning</a> from the HCI Lab in St. Gallen, Switzerland, and by <a href="https://profiles.ucl.ac.uk/33314-yvonne-rogers" target="_blank" rel="noopener noreferrer">Yvonne Rogers</a> from UCL in London, UK. 
 					<br> <br>I successfully defended my PhD in June 2024, after which I took on the role of postdoctoral researcher at the University of Bremen. In Novemer 2024, I moved to the Max Planck Institute (MPI) in Saarbrücken, Germany, where I continued my postdoctoral research at the <a href="https://sensint.mpi-inf.mpg.de/" target="_blank" rel="noopener noreferrer">Sensorimotor Interaction Group</a>. This role allowed me to broaden my research scope to include haptics, tangibles, and additionally focus on psychological aspects of human-computer interaction (HCI). During the summer of 2025, I was also fortunate to have been a visiting researcher at the Artifical Intelligence and <a href="https://liquetaylor.wixstudio.com/airlab" target="_blank" rel="noopener noreferrer">Robotics Lab (AIRLab)</a> at Cornell Tech, New York, led by <a href="https://tech.cornell.edu/people/angelique-taylor" target="_blank" rel="noopener noreferrer">Angelique Taylor</a>. The AIRLab's research combines AI, Mixed Reality (MR), robotics and healthcare. During this time, I explored thow AI can help young adults in dealing with negative thoughts and promoting positive self-talk, and how AR could facilitate the handover of a patient between Emergency Medical Services (EMS) - the medical first responders at the scene of accident - and the Emergency Department in the hospital.
-					<br> <br>While my extended academic network span multiple labs from different continents, I have especially strong connections with <a href="https://niess.me/" target="_blank" rel="noopener noreferrer">Jasmin Niess</a> from the University of Oslo, who has been my mentor for many years. Together, we explore technologies for well-being and features that make technology creepy. I also work a lot together with <a "href=https://informatics.tuwien.ac.at/people/pawel-wozniak" target="_blank" rel="noopener noreferrer">Pawel W. Wozniak</a> from TU Wien, Austria, in the field of personal informatics. 
+					<br> <br>While my extended academic network span multiple labs from different continents, I have especially strong connections with <a href="https://niess.me/" target="_blank" rel="noopener noreferrer">Jasmin Niess</a> from the University of Oslo, who has been my mentor for many years. Together, we explore technologies for well-being and features that make technology creepy. I also work a lot together with <a href="https://informatics.tuwien.ac.at/people/pawel-wozniak" target="_blank" rel="noopener noreferrer">Pawel W. Wozniak</a> from TU Wien, Austria, in the field of personal informatics. 
 					</p>
 				</section>
 				
@@ -375,4 +387,26 @@
 			</div>
 		</div>
 	</div>
+	
+	<script>
+  const sidebar = document.querySelector('.sidebar');
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  if (sidebar && btn && menu) {
+    btn.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // optional: close menu after clicking a link
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        sidebar.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
+
 </body>
