@@ -7,7 +7,9 @@
   --muted: #5d6675;
   --line: #dde3ea;
   --line-strong: #c7d0dc;
-  --teal: #0f766e;
+  --photo-blue: #3f7892;
+  --teal: var(--photo-blue);
+  --link: var(--photo-blue);
   --berry: #8a3f59;
   --blue: #315f8f;
   --shadow: 0 18px 42px rgba(22, 26, 34, 0.08);
@@ -34,7 +36,7 @@ body {
 }
 
 a {
-  color: var(--teal);
+  color: var(--link);
   text-decoration: none;
   text-underline-offset: 3px;
   overflow-wrap: anywhere;
@@ -45,7 +47,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 3px solid rgba(15, 118, 110, 0.22);
+  outline: 3px solid rgba(63, 120, 146, 0.24);
   outline-offset: 3px;
 }
 
@@ -262,13 +264,6 @@ section p {
   margin: 22px 0 22px;
 }
 
-.technology-block {
-  margin-top: 24px;
-}
-
-.technology-block h2 {
-  margin-bottom: 12px;
-}
 
 .quick-facts > span {
   display: inline-flex;
@@ -283,8 +278,58 @@ section p {
   font-weight: 650;
 }
 
+
+
+/* About + technologies side-by-side */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.about-copy {
+  min-width: 0;
+}
+
+.technology-block {
+  margin-top: 0;
+  padding-left: 30px;
+  border-left: 1px solid var(--line);
+}
+
+.technology-block h2 {
+  margin-bottom: 18px;
+  color: var(--photo-blue);
+}
+
+.technology-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .technology-facts > span {
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 92px;
+  padding: 10px 8px;
+  color: var(--text);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.technology-icon {
+  font-size: 1.55rem;
+  line-height: 1;
 }
 
 /* Academic service */
@@ -362,50 +407,63 @@ section p {
 
 /* Research pillars */
 .pillar-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
   margin-top: 28px;
+  border-top: 1px solid var(--line-strong);
 }
 
 .research-pillar {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.9fr) minmax(280px, 1.1fr);
-  gap: 28px;
-  padding: 28px 0;
-  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 20px;
+  padding: 26px 24px 4px;
+  border-left: 1px solid var(--line);
 }
 
 .research-pillar:first-child {
-  border-top-color: var(--line-strong);
+  padding-left: 0;
+  border-left: 0;
+}
+
+.research-pillar:last-child {
+  padding-right: 0;
 }
 
 .pillar-heading {
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.pillar-heading h2 {
+  color: var(--photo-blue);
 }
 
 .pillar-heading p {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .pillar-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   color: var(--surface);
-  background: var(--teal);
+  background: var(--photo-blue);
   border-radius: 50%;
   font-size: 0.82rem;
   font-weight: 800;
 }
 
-.research-pillar:nth-child(2) .pillar-number {
-  background: var(--berry);
-}
-
+.research-pillar:nth-child(2) .pillar-number,
 .research-pillar:nth-child(3) .pillar-number {
-  background: var(--blue);
+  background: var(--photo-blue);
 }
 
 .paper-list {
@@ -417,11 +475,8 @@ section p {
 }
 
 .paper-list li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: start;
-  padding: 14px 0;
+  display: block;
+  padding: 11px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -430,25 +485,35 @@ section p {
   padding-top: 0;
 }
 
-.paper-list a,
-.paper-title {
+/* Core-paper titles stay black even though normal links use the photo blue. */
+.paper-list a {
   color: var(--text);
   font-weight: 700;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
+.paper-list a:hover {
+  color: var(--text);
+}
+
 .paper-title {
   display: block;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .paper-list .paper-meta {
-  min-width: 90px;
+  display: block;
+  min-width: 0;
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 750;
-  text-align: right;
-  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: normal;
 }
 
 /* Publication entries */
@@ -492,7 +557,19 @@ img {
 }
 
 .title a {
-  color: var(--text);
+  color: var(--link);
+}
+
+/* Use this class to highlight non-link text in the same accent as links. */
+.link-highlight {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.award-icon {
+  display: inline-block;
+  margin-right: 0.35em;
+  vertical-align: 0.03em;
 }
 
 .authors {
@@ -606,9 +683,31 @@ img {
     margin: 0;
   }
 
-  .research-pillar {
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+  }
+
+  .technology-block {
+    padding-left: 0;
+    padding-top: 24px;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .pillar-list {
+    grid-template-columns: 1fr;
+  }
+
+  .research-pillar,
+  .research-pillar:first-child,
+  .research-pillar:last-child {
+    padding: 24px 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .research-pillar:first-child {
+    border-top: 0;
   }
 
   .service-items > li {
@@ -641,9 +740,13 @@ img {
     height: 144px;
   }
 
+  .technology-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .pillar-heading {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 10px;
   }
 
   .paper-list li {
