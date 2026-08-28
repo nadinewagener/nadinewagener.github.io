@@ -64,7 +64,7 @@ a:focus-visible {
 
 .nav-inner {
   display: grid;
-  grid-template-columns: 304px minmax(0, 1fr);
+  grid-template-columns: 340px minmax(0, 1fr);
   gap: 32px;
   width: min(1220px, calc(100% - 40px));
   margin: 0 auto;
@@ -108,7 +108,7 @@ a:focus-visible {
 /* Page structure */
 .container {
   display: grid;
-  grid-template-columns: 304px minmax(0, 1fr);
+  grid-template-columns: 340px minmax(0, 1fr);
   gap: 32px;
   width: min(1220px, calc(100% - 40px));
   margin: 28px auto 48px;
