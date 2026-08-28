@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 82" role="img" aria-labelledby="title desc">
+  <title id="title">Technology democracy and design thumbnail</title>
+  <desc id="desc">A ballot, network nodes, and design grid suggesting democratic technology design.</desc>
+  <rect width="104" height="82" rx="8" fill="#f8f9fb"/>
+  <rect x="14" y="16" width="32" height="42" rx="5" fill="#ffffff" stroke="#c7d0dc" stroke-width="2"/>
+  <path d="M20 29h15M20 40h19M20 51h12" stroke="#5d6675" stroke-width="2" stroke-linecap="round"/>
+  <path d="M53 24l17 10 17-10M70 34v20M53 54l17-20 17 20" fill="none" stroke="#315f8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="53" cy="24" r="5" fill="#0f766e"/>
+  <circle cx="87" cy="24" r="5" fill="#8a3f59"/>
+  <circle cx="70" cy="34" r="5" fill="#315f8f"/>
+  <circle cx="53" cy="54" r="5" fill="#0f766e" opacity=".8"/>
+  <circle cx="87" cy="54" r="5" fill="#8a3f59" opacity=".8"/>
+  <path d="M23 41l5 5 12-16" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="72" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="700" fill="#161a22">Democracy + Design</text>
+</svg>

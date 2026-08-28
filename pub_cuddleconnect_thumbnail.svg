@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 82" role="img" aria-labelledby="title desc">
+  <title id="title">CuddleConnect thumbnail</title>
+  <desc id="desc">Two connected devices with a parent and child hug motif.</desc>
+  <rect width="104" height="82" rx="8" fill="#f7faf9"/>
+  <circle cx="31" cy="27" r="11" fill="#0f766e" opacity=".9"/>
+  <circle cx="70" cy="27" r="10" fill="#8a3f59" opacity=".9"/>
+  <path d="M25 48c5-12 18-12 23 0" fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M58 48c5-12 17-12 22 0" fill="none" stroke="#8a3f59" stroke-width="7" stroke-linecap="round"/>
+  <path d="M43 40c8 9 18 9 25 0" fill="none" stroke="#315f8f" stroke-width="3" stroke-linecap="round"/>
+  <rect x="15" y="55" width="27" height="16" rx="4" fill="#dfe9e6"/>
+  <rect x="62" y="55" width="27" height="16" rx="4" fill="#eadfe4"/>
+  <path d="M42 63h20" stroke="#315f8f" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="52" y="14" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="700" fill="#161a22">CuddleConnect</text>
+</svg>

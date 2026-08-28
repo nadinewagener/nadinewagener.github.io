@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 82" role="img" aria-labelledby="title desc">
+  <title id="title">Haptic redirection thumbnail</title>
+  <desc id="desc">A hand movement path with vibrotactile feedback signals.</desc>
+  <rect width="104" height="82" rx="8" fill="#f9fafb"/>
+  <path d="M20 55c12-26 31-26 44-8 7 9 12 8 20-2" fill="none" stroke="#315f8f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 55l8-18c2-4 8-3 8 2v17" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M47 41v17M57 43v14M67 47v10" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <g fill="none" stroke="#8a3f59" stroke-width="2" stroke-linecap="round">
+    <path d="M69 20c5 4 5 10 0 14"/>
+    <path d="M76 16c9 8 9 18 0 26"/>
+    <path d="M28 21c-4 4-4 9 0 13"/>
+    <path d="M22 17c-8 7-8 17 0 24"/>
+  </g>
+  <text x="52" y="72" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="700" fill="#161a22">Haptic Redirection</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 82" role="img" aria-labelledby="title desc">
+  <title id="title">Personal informatics tensions thumbnail</title>
+  <desc id="desc">Charts balanced against responsibility, representing tensions in personal informatics.</desc>
+  <rect width="104" height="82" rx="8" fill="#f8f9fb"/>
+  <rect x="14" y="18" width="34" height="42" rx="5" fill="#ffffff" stroke="#dde3ea" stroke-width="2"/>
+  <path d="M22 50V39M31 50V28M40 50V34" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M64 25v27M52 38h24" stroke="#315f8f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M52 38l-8 15h16l-8-15zM76 38l-8 15h16l-8-15z" fill="#ffffff" stroke="#8a3f59" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="64" cy="22" r="5" fill="#315f8f"/>
+  <path d="M20 66h64" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round"/>
+  <text x="52" y="75" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="700" fill="#161a22">PI Tensions</text>
+</svg>
